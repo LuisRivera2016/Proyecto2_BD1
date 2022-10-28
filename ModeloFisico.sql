@@ -10,7 +10,7 @@ Nombre VARCHAR(50) NOT NULL,
 Apellido VARCHAR(50) NOT NULL,
 Fecha_Nacimiento DATE NOT NULL,
 Correo VARCHAR(100) NOT NULL,
-Telefono INT NOT NULL,
+Telefono BIGINT NOT NULL,
 Direccion VARCHAR(100) NOT NULL,
 Fecha_Registro DATETIME NOT NULL
 );
@@ -20,13 +20,14 @@ Id_Carrera INT AUTO_INCREMENT PRIMARY KEY,
 Nombre VARCHAR(50) NOT NULL
 );
 
+
 CREATE TABLE Estudiante(
 Carnet BIGINT PRIMARY KEY,
 Nombre VARCHAR(50) NOT NULL,
 Apellido VARCHAR(50) NOT NULL, 
 Fecha_Nacimiento DATE NOT NULL,
 Correo VARCHAR(100) NOT NULL,
-Telefono INT NOT NULL,
+Telefono BIGINT NOT NULL,
 Direccion VARCHAR(100) NOT NULL,
 DPI INT NOT NULL,
 Id_Carrera INT NOT NULL,
@@ -47,7 +48,7 @@ Codigo INT AUTO_INCREMENT PRIMARY KEY,
 Nombre VARCHAR(50) NOT NULL,
 Creditos_Necesarios INT NOT NULL,
 Creditos_Otorga INT NOT NULL,
-Obligatorio VARCHAR(1) NOT NULL,
+Obligatorio BOOL NOT NULL,
 Id_Carrera INT NOT NULL,
 FOREIGN KEY (Id_Carrera) REFERENCES Carrera(Id_Carrera) 
 );
